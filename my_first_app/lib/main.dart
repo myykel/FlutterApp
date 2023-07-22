@@ -43,7 +43,7 @@ class LoginPage extends StatelessWidget {
                   fontWeight: FontWeight.bold),
             ),
             const Text(
-              "To Map Blog",
+              "To Michael Blog",
               style: TextStyle(
                   color: Colors.white70,
                   fontSize: 35,
@@ -58,17 +58,18 @@ class LoginPage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context)
-                .push(MaterialPageRoute(builder: (BuildContext context){
-                 return const HomePage();
-                },
-                )
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (BuildContext context) {
+                      return const HomePage();
+                    },
+                  ),
                 );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 foregroundColor: Colors.red,
-                minimumSize:const Size(300, 40),
+                minimumSize: const Size(300, 40),
               ),
               child: const Text("Login"),
             ),
@@ -78,9 +79,9 @@ class LoginPage extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor:Colors.red,
-                  foregroundColor: Colors.white,
-                  minimumSize: const Size(300, 40) ),
+                    backgroundColor: Colors.red,
+                    foregroundColor: Colors.white,
+                    minimumSize: const Size(300, 40)),
                 child: const Text("Register"))
           ],
         ),
